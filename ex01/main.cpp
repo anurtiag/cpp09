@@ -5,29 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/28 10:57:02 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/09/02 13:13:56 by anurtiag         ###   ########.fr       */
+/*   Created: 2024/09/05 06:59:13 by anurtiag          #+#    #+#             */
+/*   Updated: 2024/09/05 07:06:47 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "BitcoinExchange.hpp"
+#include "RPN.hpp"
 
-int main()
+int main(int argc, char** argv)
 {
-    BitcoinExchange a;
+    RPN polish;
     try
     {
-        a.ChargeTable("data.csv");
-        a.ChargeInput("input.txt");
+        polish.ChargeInput(argc, argv);
     }
-    // catch(const std::exception& e)
-    // {
-    //     std::cerr << "hmmm" << e.what() << '\n';
-    // }
-    catch(const MyException& e)
+    catch(const std::exception& e)
     {
-        std::cerr << e.what() << '\n';
+        std::cout << e.what() << '\n';
     }
-    
     return(0);
 }

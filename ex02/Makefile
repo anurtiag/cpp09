@@ -6,16 +6,15 @@
 #    By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/05 08:30:51 by anurtiag          #+#    #+#              #
-#    Updated: 2024/09/10 15:37:46 by anurtiag         ###   ########.fr        #
+#    Updated: 2024/09/11 12:34:08 by anurtiag         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			=	PmergeMe
 
 
-#SRCS			=	main.cpp PmergeMe.cpp
+SRCS			=	main.cpp PmergeMe.cpp
 
-SRCS			=	prueba.cpp
 
 OBJ				=	$(SRCS:.cpp=.o)
 

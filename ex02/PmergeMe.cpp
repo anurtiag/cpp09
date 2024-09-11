@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 10:51:08 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/09/09 15:53:20 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/09/11 12:44:51 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ std::list<unsigned int>::iterator PmergeMe::IterAddition(std::list<unsigned int>
 
 void  PmergeMe::SortPairs()
 {
-    unsigned int nbr;
     std::list<unsigned int>::iterator iter = _list.begin();
     std::list<unsigned int>::iterator iter2 = iter;
     iter2++;
@@ -57,10 +56,7 @@ void  PmergeMe::SortPairs()
         std::cout << *iter << "\n" << *iter2 << std::endl;
         if(*iter > *iter2)
         {
-            nbr = *iter2;
-            *iter2 = *iter;
-            *iter = nbr;
-            // std::swap(*iter, *iter2);
+            std::swap(*iter, *iter2);
         }
     }
     std::cout << "\n\n\n";
@@ -68,15 +64,9 @@ void  PmergeMe::SortPairs()
         std::cout << *i << std::endl;
 }
 
-void  PmergeMe::SortThePairs()
-{
-    std::list<unsigned int> main;
-}
-
 void PmergeMe::ListSort()
 {
     SortPairs();
-    SortThePairs();
 }
 
 void PmergeMe::ParseInput(int argc, char** argv)

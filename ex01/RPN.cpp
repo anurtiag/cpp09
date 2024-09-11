@@ -6,13 +6,29 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 06:40:30 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/09/05 07:04:09 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/09/05 10:15:54 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RPN.hpp"
 
 RPN::RPN() : _result(0), _initialized_stack(false) {}
+
+RPN::RPN(const RPN& source)
+{
+    *this = source;
+}
+
+RPN& RPN::operator=(const RPN& source)
+{
+    if(this != &source)
+    {
+        _stack = source._stack;
+        _result = source._result;
+        _initialized_stack = source._initialized_stack;
+    }
+    return(*this);
+}
 
 RPN::~RPN() {}
 

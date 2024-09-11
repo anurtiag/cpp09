@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 06:40:27 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/09/05 07:03:25 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/09/05 10:11:56 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ class RPN
         bool                _initialized_stack;
     public:
         RPN();
+        RPN(const RPN& source);
+        RPN& operator=(const RPN& source);
         ~RPN();
         void ChargeInput(int argc, char** argv);
         void IsOperator(char sign);

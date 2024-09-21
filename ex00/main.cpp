@@ -28,5 +28,6 @@ int main()
     {
         std::cerr << e.what() << '\n';
     }
+    BitcoinExchange b;
     return(0);
 }
